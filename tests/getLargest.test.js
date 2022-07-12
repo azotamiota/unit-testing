@@ -1,12 +1,16 @@
 const getLargest = require('../getLargest')
 
-test("get largest is a function", () => {
-    expect(typeof getLargest).toBe('function')
+describe('getLargest', () => {
+
+    test("It is a function", () => {
+        expect(typeof getLargest).toBe('function')
+    })
+    
+    
+    test('It returns the largest number', () => {
+        const result = getLargest(1,2,3);
+        expect(result).toEqual(3);
+    }
+    )
 })
 
-
-test('Return the largest number', () => {
-    const result = getLargest(1,2,3);
-    expect(result).toEqual(3);
-}
-)
