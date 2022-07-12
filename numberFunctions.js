@@ -1,9 +1,17 @@
 const getLargest = (a, b, c) => {
-    return Math.max(a,b,c)
+    if (a && b && c) {
+        return Math.max(a,b,c)
+    } else {
+        throw 'Error: all inputs must have a value'
+    }
 }
 
 const getSmallest = (a, b, c) => {
-    return Math.min(a,b,c)
+    if (a && b && c) {
+        return Math.min(a,b,c)
+    } else {
+        throw 'Error: all inputs must have a value'
+    }
 }
 
-module.exports = getLargest
+module.exports = {getLargest, getSmallest}
